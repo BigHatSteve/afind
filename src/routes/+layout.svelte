@@ -3,6 +3,8 @@
     import Header from "./Header.svelte";
 </script>
 
-<Header />
+<div class="max-w-[64rem] mx-auto">
+    <Header />
 
-<slot />
+    <slot />
+</div>
