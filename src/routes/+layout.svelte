@@ -10,5 +10,7 @@
 <div class="max-w-[64rem] mx-auto">
     <Header />
 
-    <slot />
+    <main class="px-4">
+        <slot />
+    </main>
 </div>
