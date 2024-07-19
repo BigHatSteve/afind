@@ -28,7 +28,7 @@ export const actions: Actions = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Basic ${Buffer.from(`anystring:${API_KEY}`).toString("base64")}`,
+                "Authorization": `Basic ${btoa(`anystring:${API_KEY}`)}`,
             },
             body: JSON.stringify({
                 email_address: waitlistForm.data.email,
