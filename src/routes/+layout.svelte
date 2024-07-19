@@ -5,7 +5,7 @@
     import { Toaster } from "$lib/components/ui/sonner";
 </script>
 
-<Toaster />
+<Toaster richColors />
 
 <div class="max-w-[64rem] mx-auto">
     <Header />
