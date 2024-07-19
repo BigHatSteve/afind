@@ -6,7 +6,6 @@ import { zod } from "sveltekit-superforms/adapters";
 
 // mailchimp
 import { API_KEY, SERVER_PREFIX, AUDIENCE_ID } from "$env/static/private";
-import mailchimp from "@mailchimp/mailchimp_marketing";
 // mailchimp
 
 export const load: PageServerLoad = async () => {
@@ -25,17 +24,20 @@ export const actions: Actions = {
         };
 
         // mailchimp
-        try {
-            mailchimp.setConfig({
-                apiKey: API_KEY,
-                server: SERVER_PREFIX,
-            });
-            const response = await mailchimp.lists.addListMember(AUDIENCE_ID, {
+        const response = await fetch(`https://${SERVER_PREFIX}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Basic ${Buffer.from(`anystring:${API_KEY}`).toString("base64")}`,
+            },
+            body: JSON.stringify({
                 email_address: waitlistForm.data.email,
                 status: "subscribed",
-            });
-        } catch (err: any) {
-            if (err.response.body.title === "Member Exists") {
+            }),
+        });
+        const result = await response.json();
+        if (!response.ok) {
+            if (result.title === "Member Exists") {
                 error(400, {
                     message: "You are already on the waitlist!"
                 });
