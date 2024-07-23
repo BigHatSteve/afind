@@ -61,8 +61,8 @@
                         <Card.Root>
                             <Card.Content class="flex aspect-square items-center justify-center p-6">
                                 <div>
-                                    <img src={interactionImage.image} alt="App interaction" />
-                                    <p class="text-center">{interactionImage.description}</p>
+                                    <img src={interactionImage.image} width="270" height="270" alt="App interaction" class="rounded-lg" />
+                                    <p class="text-center pt-2">{interactionImage.description}</p>
                                 </div>
                             </Card.Content>
                         </Card.Root>
@@ -77,7 +77,7 @@
 <div class="flex flex-col items-center gap-4 mb-16">
     <h2 class="text-2xl text-primary text-center font-semibold">Exploring businesses</h2>
     <p class="text-center">Our unique approach leverages short-form, AI-driven video recommendations tailored to your preferences and location.</p>
-    <img src={phone} alt="Afind app on a phone" />
+    <img src={phone} width="232" height="412" alt="Afind app on a phone" />
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
