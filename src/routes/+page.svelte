@@ -14,7 +14,7 @@
 <div class="flex flex-col items-center gap-4 py-32">
     <h1 class="text-5xl text-center font-semibold">Afind</h1>
     <h2 class="text-lg text-center">Discover, engage, and explore with Afind - your personalized guide to local adventures.</h2>
-    <p class="text-sm pt-4">Join our waitlist to be notified when Afind releases!</p>
+    <p class="text-sm text-center pt-4">Join our waitlist to be notified when Afind releases!</p>
     <WaitlistForm data={data.waitlistForm} />
 </div>
 
