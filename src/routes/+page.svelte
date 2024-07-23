@@ -81,10 +81,10 @@
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-    <FeatureCard title="Hyper-Localized Discoveries" description="Select a radius on our in-app map and receive personalized recommendations from nearby businesses and attractions, dynamically refined by AI based on your interactions.">
+    <FeatureCard title="Hyper-localized discoveries" description="Select a radius on our in-app map and receive personalized recommendations from nearby businesses and attractions, dynamically refined by AI based on your interactions.">
         <MapPin slot="icon" class="h-6 w-6 shrink-0 mt-1" />
     </FeatureCard>
-    <FeatureCard title="Content-Focused Platform" description="Unlike TikTok's broad content scope, Yelp's reviews, or Google Maps' search functionalities, Afind focuses on inspiring discovery through engaging, hyper-localized short videos.">
+    <FeatureCard title="Content-focused platform" description="Unlike TikTok's broad content scope, Yelp's reviews, or Google Maps' search functionalities, Afind focuses on inspiring discovery through engaging, hyper-localized short videos.">
         <Video slot="icon" class="h-6 w-6 shrink-0 mt-1" />
     </FeatureCard>
 </div>
