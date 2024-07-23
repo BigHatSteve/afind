@@ -2,6 +2,7 @@
     import type { PageData } from "./$types";
     import * as Card from "$lib/components/ui/card";
     import * as Carousel from "$lib/components/ui/carousel";
+    import Autoplay from "embla-carousel-autoplay";
     import WaitlistForm from "./waitlist-form.svelte";
     export let data: PageData;
 </script>
@@ -21,7 +22,13 @@
 <div class="flex flex-col items-center gap-4">
     <h2 class="text-2xl text-center font-semibold">How it works</h2>
     <p class="text-center pb-4">Afind is a cutting-edge mobile application designed to revolutionize the way users discover local businesses and attractions. Our unique approach leverages short-form, AI-driven video recommendations tailored to your preferences and location.</p>
-    <Carousel.Root class="w-full max-w-sm flex items-center gap-2">
+    <Carousel.Root class="w-full max-w-sm flex items-center gap-2" 
+        plugins={[
+            Autoplay({
+                delay: 4000,
+            }),
+        ]}
+    >
         <Carousel.Previous class="shrink-0" />
         <Carousel.Content>
             {#each Array(4) as _, i (i)}
