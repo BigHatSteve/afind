@@ -75,6 +75,7 @@
 </div>
 
 <div class="flex flex-col items-center gap-4 mb-16">
+    <h2 class="text-2xl text-sky-600 text-center font-semibold">Exploring businesses</h2>
     <p class="text-center">Our unique approach leverages short-form, AI-driven video recommendations tailored to your preferences and location.</p>
     <img src={phone} alt="Afind app on a phone" />
 </div>
