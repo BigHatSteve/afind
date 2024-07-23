@@ -3,7 +3,12 @@
     import * as Card from "$lib/components/ui/card";
     import * as Carousel from "$lib/components/ui/carousel";
     import Autoplay from "embla-carousel-autoplay";
+    import FeatureCard from "$lib/components/FeatureCard.svelte";
+    import MapPin from "lucide-svelte/icons/map-pin";
+    import Video from "lucide-svelte/icons/video";
+
     import WaitlistForm from "./waitlist-form.svelte";
+
     export let data: PageData;
 </script>
 
@@ -19,7 +24,7 @@
     <WaitlistForm data={data.waitlistForm} />
 </div>
 
-<div class="flex flex-col items-center gap-4">
+<div class="flex flex-col items-center gap-4 mb-16">
     <h2 class="text-2xl text-center font-semibold">How it works</h2>
     <p class="text-center pb-4">Afind is a cutting-edge mobile application designed to revolutionize the way users discover local businesses and attractions. Our unique approach leverages short-form, AI-driven video recommendations tailored to your preferences and location.</p>
     <Carousel.Root class="w-full max-w-sm flex items-center gap-2" 
@@ -45,4 +50,13 @@
         </Carousel.Content>
         <Carousel.Next class="shrink-0" />
     </Carousel.Root>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+    <FeatureCard title="Hyper-Localized Discoveries" description="Select a radius on our in-app map and receive personalized recommendations from nearby businesses and attractions, dynamically refined by AI based on your interactions.">
+        <MapPin slot="icon" class="h-6 w-6 shrink-0 mt-1" />
+    </FeatureCard>
+    <FeatureCard title="Content-Focused Platform" description="Unlike TikTok's broad content scope, Yelp's reviews, or Google Maps' search functionalities, Afind focuses on inspiring discovery through engaging, hyper-localized short videos.">
+        <Video slot="icon" class="h-6 w-6 shrink-0 mt-1" />
+    </FeatureCard>
 </div>
