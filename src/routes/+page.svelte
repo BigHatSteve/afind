@@ -25,7 +25,7 @@
 </div>
 
 <div class="flex flex-col items-center gap-4 mb-16">
-    <h2 class="text-2xl text-center font-semibold">How it works</h2>
+    <h2 class="text-2xl text-sky-600 text-center font-semibold">How it works</h2>
     <p class="text-center pb-4">Afind is a cutting-edge mobile application designed to revolutionize the way users discover local businesses and attractions. Our unique approach leverages short-form, AI-driven video recommendations tailored to your preferences and location.</p>
     <Carousel.Root class="w-full max-w-sm flex items-center gap-2" 
         plugins={[
