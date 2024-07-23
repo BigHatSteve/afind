@@ -6,10 +6,28 @@
     import FeatureCard from "$lib/components/FeatureCard.svelte";
     import MapPin from "lucide-svelte/icons/map-pin";
     import Video from "lucide-svelte/icons/video";
+    import interaction1 from "$lib/assets/interaction-1.webp";
+    import interaction2 from "$lib/assets/interaction-2.webp";
+    import interaction3 from "$lib/assets/interaction-3.webp";
 
     import WaitlistForm from "./waitlist-form.svelte";
 
     export let data: PageData;
+
+    let interactionImages = [
+        {
+            image: interaction1,
+            description: "Use our search engines to locate your area",
+        },
+        {
+            image: interaction2,
+            description: "Choose a radius of an area you would like to explore",
+        },
+        {
+            image: interaction3,
+            description: "Click on a pinpoint to find more about a business",
+        },
+    ];
 </script>
 
 <svelte:head>
@@ -36,12 +54,15 @@
     >
         <Carousel.Previous class="shrink-0" />
         <Carousel.Content>
-            {#each Array(4) as _, i (i)}
+            {#each interactionImages as interactionImage}
                 <Carousel.Item>
                     <div class="p-1">
                         <Card.Root>
                             <Card.Content class="flex aspect-square items-center justify-center p-6">
-                                <span class="text-4xl font-semibold">{i + 1}</span>
+                                <div>
+                                    <img src={interactionImage.image} alt="App interaction" />
+                                    <p class="text-center">{interactionImage.description}</p>
+                                </div>
                             </Card.Content>
                         </Card.Root>
                     </div>
