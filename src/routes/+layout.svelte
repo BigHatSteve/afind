@@ -3,8 +3,11 @@
     import Header from "./Header.svelte";
     import Footer from "./Footer.svelte";
 
+    import { ModeWatcher } from "mode-watcher";
     import { Toaster } from "$lib/components/ui/sonner";
 </script>
+
+<ModeWatcher />
 
 <Toaster richColors />
 
