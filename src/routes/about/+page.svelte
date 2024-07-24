@@ -1,5 +1,8 @@
 <script lang="ts">
     import * as Accordion from "$lib/components/ui/accordion";
+    import FeatureCard from "$lib/components/FeatureCard.svelte";
+    import HandCoins from "lucide-svelte/icons/hand-coins";
+    import Handshake from "lucide-svelte/icons/handshake";
 </script>
 
 <svelte:head>
@@ -9,7 +12,7 @@
 
 <h1 class="text-4xl font-semibold text-center pt-16 pb-8">About Afind</h1>
 <p class="text-xl text-center pb-16">Afind works to find hidden gems within their city through localized and short AI-driven videos. Within a chosen radius, the app recommends businesses or attractions that are tailored to the user's preference over time algorithmically.</p>
-<h2 class="text-3xl font-medium text-center pb-8">FAQ</h2>
+<h2 class="text-3xl text-primary font-medium text-center pb-8">FAQ</h2>
 <Accordion.Root>
     <Accordion.Item value="item-1">
         <Accordion.Trigger class="text-left">How does the Afind app work?</Accordion.Trigger>
@@ -41,3 +44,12 @@
         </Accordion.Content>
     </Accordion.Item>
 </Accordion.Root>
+<h2 class="text-3xl text-primary font-medium text-center pt-16 pb-8">Afind for businesses</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-16">
+    <FeatureCard title="Early monetization for creators" description="Our monetization strategy allows businesses to boost videos that highlight their offerings, providing instant financial rewards for creators and fostering a vibrant content ecosystem. With an 80/20 revenue split favoring creators, Afind incentivizes quality content creation from the start.">
+        <HandCoins slot="icon" class="h-6 w-6 shrink-0 mt-1" />
+    </FeatureCard>
+    <FeatureCard title="Business-friendly engagement" description="By focusing on recommendations rather than reviews, Afind offers businesses a platform to showcase their services through authentic third-party experiences without the fear of manipulated ratings.">
+        <Handshake slot="icon" class="h-6 w-6 shrink-0 mt-1" />
+    </FeatureCard>
+</div>
