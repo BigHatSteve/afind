@@ -36,7 +36,7 @@
     <meta name="description" content="Discover, engage, and explore with Afind - your personalized guide to local adventures." />
 </svelte:head>
 
-<div class="flex flex-col items-center gap-4 my-32">
+<div class="flex flex-col items-center gap-4 py-32 bg-[radial-gradient(closest-side,_hsl(221.2,83.2%,85%)_0%,_hsl(221.2,83.2%,85%)_10%,_transparent_100%)] dark:bg-[radial-gradient(closest-side,_hsl(217.2,91.2%,20%)_0%,_hsl(217.2,91.2%,20%)_10%,_transparent_100%)]">
     <h1 class="text-5xl text-center font-semibold">Afind</h1>
     <h2 class="text-lg text-center">Discover, engage, and explore with Afind - your personalized guide to local adventures.</h2>
     <p class="text-sm text-center pt-4">Join our waitlist to be notified when Afind releases!</p>
