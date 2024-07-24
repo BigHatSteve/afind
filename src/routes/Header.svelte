@@ -9,6 +9,6 @@
         <span class="text-2xl font-semibold">Afind</span>
     </a>
     <nav>
-        <Button variant="secondary" href="/about">About us</Button>
+        <Button variant="secondary" href="/about">About</Button>
     </nav>
 </header>
