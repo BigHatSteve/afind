@@ -49,16 +49,16 @@
 }
 
 @layer base {
+    @font-face {
+        font-family: "Geist";
+        src: url("/fonts/Geist.woff2") format("woff2");
+        font-display: swap;
+    }
+
     * {
         @apply border-border;
     }
     body {
         @apply bg-background text-foreground;
-    }
-}
-
-@font-face {
-    font-family: "Geist";
-    src: url("/fonts/Geist.woff2");
-    font-display: swap;
+    } 
 }
